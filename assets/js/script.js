@@ -27,7 +27,7 @@ $(document).ready(function runFunction() {
 
   // Displays user's saved entry corresponding to the time block it was first entered under
   // Saved input is saved and called from local storage
-  for (var i = 9; i < 17; i++) {
+  for (var i = 9; i < 18; i++) {
     $("#"+i).children(".description").text(localStorage.getItem("hour"+i)) 
   }
 

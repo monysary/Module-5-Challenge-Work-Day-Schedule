@@ -7,6 +7,15 @@ $(document).ready(function runFunction() {
 
     // Add to time block and user input into local storage
     localStorage.setItem(timeBlock.trim(), userInput.trim());
+
+    // Display tooltip to confirm event has been saved
+    $(this).children(".tool-tip").css("display", "block");
+
+    // Tooltip disappears after 2 seconds
+    setTimeout(function() {
+      $(".tool-tip").css("display", "none");
+    }, 2000);
+
   });
 
   // Assign the current hour to a variable

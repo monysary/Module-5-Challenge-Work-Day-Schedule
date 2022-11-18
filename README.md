@@ -4,7 +4,7 @@
 This website allows users to log events by the hour for the current day within a regular 9 to 5 work schedule.
 
 ## Installation
-Load the website on a web browser using the following link:
+Load the website on a web browser using the following link: https://monysary.github.io/Work-Day-Schedule/
 
 ## Usage
 This website displays the current date in the header and time blocks between the hours of 9AM to 5PM only for that current day.

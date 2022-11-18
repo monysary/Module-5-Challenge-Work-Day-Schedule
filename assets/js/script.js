@@ -2,6 +2,12 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 $(document).ready(function runFunction() {
+  // Displays user's saved input corresponding to the time block it was first saved under
+  // Saved input is saved and called from local storage
+  for (var i = 9; i < 17; i++) {
+    $("#"+i).children(".description").text(localStorage.getItem("hour"+i)) 
+  }
+
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
@@ -9,9 +15,9 @@ $(document).ready(function runFunction() {
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
   $("#time-block-container").on("click", ".btn", function() {
-    // Assign time block and user input inside a variable
+    // Assigning time block and user input variable
     var userInput = $(this).siblings(".description").val();
-    var timeBlock = "hour " + $(this).parent().attr("id");
+    var timeBlock = "hour" + $(this).parent().attr("id");
 
     // Add to time block and user input into local storage
     localStorage.setItem(timeBlock.trim(), userInput.trim());
